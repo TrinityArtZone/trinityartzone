@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Trinity Art School student registration">
+  <title>Student Registration | Trinity Art Zone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="header-inner">
+  <a class="brand" href="index.html"><img src="trinity logo.jpg" alt="Trinity Art Zone logo"><span><strong>Trinity</strong><strong>Art Zone</strong></span></a>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="nav-links"><a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#gallery">Gallery</a><a href="student.html">Student Section</a><a class="nav-admin" href="admin.html">Admin</a></nav>
+</div></header>
+<main class="portal"><div class="portal-card">
+  <a class="back" href="index.html">← Trinity Art Zone</a>
+  <p class="eyebrow">TRINITY ART SCHOOL</p><h1>Student Registration</h1>
+  <p>Fill in the details below to register as a student of <strong>Trinity Art School</strong>.</p>
+  <p>A unique Student ID such as <strong>TAS001</strong> will be generated automatically.</p>
+  <form id="studentForm" novalidate>
+    <div class="form-grid">
+      <label>Student Name<input type="text" name="name" maxlength="100" autocomplete="name" required></label>
+      <label>Date of Birth<input type="date" name="dob" required></label>
+      <label>Father's Name<input type="text" name="fatherName" maxlength="100" required></label>
+      <label>Mother's Name<input type="text" name="motherName" maxlength="100" required></label>
+      <label>Admission Year<input type="number" name="admissionYear" min="2000" max="2100" value="2026" required></label>
+      <label>Photo URL <span class="field-note">(optional)</span><input type="url" name="photo" placeholder="https://..." maxlength="500"></label>
+    </div>
+    <button class="btn" id="submitStudentBtn" type="submit">Submit & Generate Student ID</button>
+  </form>
+  <div id="studentResult" class="result hidden" aria-live="polite"></div>
+</div></main>
+<footer><p>© <span id="year"></span> Trinity Art Zone · Trinity Art School</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
