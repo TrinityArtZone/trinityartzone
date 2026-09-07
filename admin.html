@@ -1,37 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Admin | Trinity Art Zone</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<header class="site-header"><div class="header-inner">
-  <a class="brand" href="index.html"><img src="trinity logo.jpg" alt="Trinity logo"><span><strong>Trinity</strong><strong>Art Zone</strong></span></a>
-  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-  <nav class="nav-links"><a href="index.html">Home</a><a href="student.html">Student Section</a><a href="verify.html">Verify Student</a></nav>
-</div></header>
-<main class="portal"><div class="portal-card">
-  <a class="back" href="index.html">← Trinity Art Zone</a>
-  <section id="loginBox">
-    <p class="eyebrow">TRINITY ART ZONE</p><h1>Admin Login</h1>
-    <form id="adminLoginForm">
-      <div class="form-grid">
-        <label>Username<input id="adminUser" type="text" autocomplete="username" required></label>
-        <label>Password<input id="adminPass" type="password" autocomplete="current-password" required></label>
-      </div>
-      <button class="btn" type="submit">Login</button>
-    </form>
-    <p id="loginMessage" class="message" aria-live="polite"></p>
-  </section>
-  <section id="adminPanel" class="hidden">
-    <div class="admin-toolbar"><div><p class="eyebrow">ADMIN DASHBOARD</p><h1>Students</h1></div><div class="hero-actions"><button id="refreshStudents" class="btn btn-outline" type="button">Refresh</button><button id="logoutAdmin" class="btn" type="button">Logout</button></div></div>
-    <div id="studentTable" aria-live="polite"><p>Loading students...</p></div>
-  </section>
-</div></main>
-<footer><p>© <span id="year"></span> Trinity Art Zone · Trinity Art School</p></footer>
-</script><script src="script.js"></script>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <a class="brand" href="index.html">
+      <img src="trinity logo.jpg" alt="Trinity logo">
+      <span>
+        <strong>Trinity</strong>
+        <strong>Art Zone</strong>
+      </span>
+    </a>
+
+    <button class="menu-toggle" type="button"
+      aria-label="Open menu"
+      aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="verify.html">Verify Student</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="portal">
+
+  <div class="portal-card">
+
+    <a class="back" href="index.html">
+      ← Trinity Art Zone
+    </a>
+
+    <section id="loginBox">
+
+      <p class="eyebrow">TRINITY ART ZONE</p>
+
+      <h1>Admin Login</h1>
+
+      <form id="adminLoginForm">
+
+        <div class="form-grid">
+
+          <label>
+            Username
+            <input
+              id="adminUser"
+              type="text"
+              autocomplete="username"
+              required
+            >
+          </label>
+
+          <label>
+            Password
+            <input
+              id="adminPass"
+              type="password"
+              autocomplete="current-password"
+              required
+            >
+          </label>
+
+        </div>
+
+        <button class="btn" type="submit">
+          Login
+        </button>
+
+      </form>
+
+      <p id="loginMessage"
+         class="message"
+         aria-live="polite">
+      </p>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer>
+  <p>
+    © <span id="year"></span>
+    Trinity Art Zone · Trinity Art School
+  </p>
+</footer>
+
+
+<script src="admin.js"></script>
+
 </body>
 </html>
