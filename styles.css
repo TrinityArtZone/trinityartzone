@@ -32,3 +32,469 @@
     letter-spacing: 0.5px;
     white-space: nowrap;
 }
+
+/* =========================================
+   TRINITY ART ZONE
+   EXTRA MOBILE RESPONSIVE FIXES
+   ========================================= */
+
+/* Prevent anything from creating horizontal scrolling */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Make all media responsive */
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  /* HEADER */
+
+  .header-inner {
+    padding: 10px 18px;
+    min-height: 72px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+  }
+
+  .brand strong {
+    font-size: 24px;
+  }
+
+  .brand small {
+    font-size: 16px;
+  }
+
+
+  /* MOBILE MENU */
+
+  .nav-links {
+    right: 15px;
+    top: 72px;
+    width: calc(100vw - 30px);
+    max-width: 300px;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 7px 4px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    width: 100%;
+    padding: 55px 20px;
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 12vw, 70px);
+    line-height: .95;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-frame {
+    width: 100%;
+    transform: none;
+  }
+
+  .hero-frame img {
+    width: 100%;
+    height: 360px;
+  }
+
+
+  /* GENERAL SECTIONS */
+
+  .section {
+    width: 100%;
+    padding: 65px 20px;
+  }
+
+  .section-heading {
+    max-width: 100%;
+  }
+
+  .section-heading h2 {
+    font-size: 43px;
+  }
+
+
+  /* ABOUT */
+
+  .about-grid {
+    gap: 30px;
+  }
+
+  .quote-card {
+    padding: 30px;
+    font-size: 26px;
+  }
+
+
+  /* GALLERY */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .art-card {
+    width: 100%;
+  }
+
+  .art-card img {
+    width: 100%;
+    height: 360px;
+  }
+
+  .two-images {
+    grid-template-columns: 1fr;
+  }
+
+  .two-images img {
+    width: 100%;
+    height: 320px;
+  }
+
+
+  /* SCHOOL SECTION */
+
+  .school-box {
+    padding: 35px 25px;
+  }
+
+  .school-box h2 {
+    font-size: 43px;
+    line-height: 1.05;
+  }
+
+
+  /* CONTACT */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+
+  /* PORTAL / ADMIN / STUDENT */
+
+  .portal {
+    width: 100%;
+    padding: 45px 15px;
+  }
+
+  .portal-card {
+    width: 100%;
+    padding: 28px 22px;
+  }
+
+  .portal-card h1 {
+    font-size: 45px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+
+  /* VERIFY */
+
+  .verify-row {
+    flex-direction: column;
+  }
+
+  .verify-row .btn {
+    width: 100%;
+  }
+
+
+  /* ADMIN TOOLBAR */
+
+  .admin-toolbar {
+    width: 100%;
+  }
+
+  .admin-toolbar .hero-actions {
+    width: 100%;
+  }
+
+  .admin-toolbar .hero-actions .btn {
+    flex: 1;
+  }
+
+
+  /* TABLE */
+
+  .admin-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-table {
+    min-width: 700px;
+  }
+
+
+  /* STUDENT PHOTO */
+
+  .student-photo {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  /* QR CODE */
+
+  .qr-box {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding: 22px 15px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  /* HEADER */
+
+  .header-inner {
+    padding: 9px 14px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand strong {
+    font-size: 22px;
+  }
+
+  .brand small {
+    font-size: 14px;
+  }
+
+  .menu-toggle {
+    font-size: 23px;
+    padding: 5px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    padding: 45px 17px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    margin: 12px 0 20px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-frame {
+    padding: 9px;
+  }
+
+  .hero-frame img {
+    height: 300px;
+  }
+
+
+  /* SECTIONS */
+
+  .section {
+    padding: 55px 17px;
+  }
+
+  .section-heading h2 {
+    font-size: 39px;
+  }
+
+
+  /* ART CARDS */
+
+  .art-card img {
+    height: 300px;
+  }
+
+  .art-info {
+    padding: 20px;
+  }
+
+  .art-info h3 {
+    font-size: 27px;
+  }
+
+
+  /* SCHOOL */
+
+  .school-box {
+    padding: 30px 20px;
+  }
+
+  .school-box h2 {
+    font-size: 38px;
+  }
+
+
+  /* PORTAL */
+
+  .portal {
+    padding: 30px 10px;
+  }
+
+  .portal-card {
+    padding: 24px 17px;
+  }
+
+  .portal-card h1 {
+    font-size: 39px;
+  }
+
+
+  /* BUTTONS */
+
+  .btn {
+    padding: 11px 18px;
+  }
+
+
+  /* GALLERY PAGE */
+
+  .gallery-page {
+    padding: 45px 12px 65px;
+  }
+
+  .gallery-heading h1 {
+    font-size: 48px;
+  }
+
+  .gallery-heading p {
+    font-size: 13px;
+  }
+
+  .gallery-image {
+    height: 280px;
+  }
+
+  .gallery-info {
+    padding: 18px 15px 20px;
+  }
+
+  .gallery-info h2 {
+    font-size: 25px;
+  }
+
+
+  /* VERIFY */
+
+  .verify-details {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+  .brand strong {
+    font-size: 20px;
+  }
+
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .section-heading h2 {
+    font-size: 35px;
+  }
+
+  .portal-card h1 {
+    font-size: 35px;
+  }
+
+  .gallery-heading h1 {
+    font-size: 42px;
+  }
+
+}
