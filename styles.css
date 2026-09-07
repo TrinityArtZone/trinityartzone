@@ -503,8 +503,11 @@ iframe {
 
 }
 .logout-container {
-    text-align: center;
-    margin: 50px 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 20px;
 }
 
 .logout-container .btn {
