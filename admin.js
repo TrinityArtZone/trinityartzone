@@ -42,3 +42,18 @@ loginForm.addEventListener("submit", function (event) {
     }
 
 });
+// ===============================
+// ADMIN LOGOUT
+// ===============================
+
+const logoutButton = document.getElementById("logoutAdmin");
+
+if (logoutButton) {
+    logoutButton.addEventListener("click", function () {
+        // Remove admin login
+        sessionStorage.removeItem("adminLoggedIn");
+
+        // Go back to Admin login page
+        window.location.href = "Admin.html";
+    });
+}
