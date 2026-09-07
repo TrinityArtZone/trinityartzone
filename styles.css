@@ -500,7 +500,9 @@ iframe {
   .gallery-heading h1 {
     font-size: 42px;
   }
-    .logout-container {
+
+}
+.logout-container {
     text-align: center;
     margin: 50px 0 20px;
 }
