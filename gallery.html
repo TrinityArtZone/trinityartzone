@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Trinity Art Zone</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main Website CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* =====================================
+       TRINITY ART ZONE - GALLERY
+       ===================================== */
+
+    .gallery-page {
+      padding: 70px 20px 90px;
+      background: #f6efe3;
+      min-height: 75vh;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .gallery-heading .eyebrow {
+      color: #806246;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .gallery-heading h1 {
+      font-family: "Cormorant Garamond", serif;
+      color: #4b3424;
+      font-size: clamp(42px, 6vw, 65px);
+      margin: 0;
+      line-height: 1;
+    }
+
+    .gallery-heading p {
+      max-width: 650px;
+      margin: 18px auto 0;
+      color: #765f4c;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+
+    /* Gallery Grid */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+
+    /* Gallery Card */
+
+    .gallery-card {
+      background: #fffaf2;
+      border: 1px solid #e5d7c4;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(75, 52, 36, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 35px rgba(75, 52, 36, 0.14);
+    }
+
+
+    /* Image */
+
+    .gallery-image {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      background: #e8dccb;
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover .gallery-image img {
+      transform: scale(1.04);
+    }
+
+
+    /* Title */
+
+    .gallery-info {
+      padding: 20px 20px 22px;
+      text-align: center;
+    }
+
+    .gallery-info h2 {
+      margin: 0;
+      color: #4b3424;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 27px;
+      font-weight: 700;
+    }
+
+    .gallery-info p {
+      margin: 7px 0 0;
+      color: #92755b;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+
+    /* Decorative line */
+
+    .gallery-line {
+      width: 55px;
+      height: 2px;
+      background: #9a7958;
+      margin: 17px auto 0;
+    }
+
+
+    /* Back link */
+
+    .gallery-back {
+      text-align: center;
+      margin-top: 55px;
+    }
+
+    .gallery-back a {
+      display: inline-block;
+      color: #5d402b;
+      text-decoration: none;
+      border: 1px solid #bca58c;
+      padding: 11px 24px;
+      border-radius: 30px;
+      font-size: 13px;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-back a:hover {
+      background: #5d402b;
+      color: #fffaf2;
+      border-color: #5d402b;
+    }
+
+
+    /* =====================================
+       RESPONSIVE
+       ===================================== */
+
+    @media (max-width: 900px) {
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .gallery-page {
+        padding: 50px 15px 70px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .gallery-image {
+        height: 280px;
+      }
+
+      .gallery-heading {
+        margin-bottom: 35px;
+      }
+
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =====================================
+       HEADER
+       ===================================== -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+
+        <img src="trinity logo.jpg" alt="Trinity Art Zone logo">
+
+        <span>
+          <strong>Trinity</strong>
+          <strong>Art Zone</strong>
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false">
+        ☰
+      </button>
+
+
+      <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="verify.html">Verify Student</a>
+
+        <a href="Admin.html">Admin</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================
+       GALLERY
+       ===================================== -->
+
+  <main class="gallery-page">
+
+    <div class="gallery-container">
+
+
+      <div class="gallery-heading">
+
+        <p class="eyebrow">
+          TRINITY ART ZONE
+        </p>
+
+        <h1>Our Gallery</h1>
+
+        <p>
+          A collection of moments, creations and artistic expressions
+          from the young artists of Trinity Art School.
+        </p>
+
+      </div>
+
+
+
+      <div class="gallery-grid">
+
+
+        <!-- PHOTO 1 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery1.jpg"
+              alt="Colors of Childhood">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Colors of Childhood</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Student Artwork</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 2 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery2.jpg"
+              alt="Little Hands, Big Dreams">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Little Hands, Big Dreams</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Young Artists</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 3 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery3.jpg"
+              alt="A Journey in Colors">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>A Journey in Colors</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Student Artwork</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 4 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery4.jpg"
+              alt="Young Artists at Work">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Young Artists at Work</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Art Class</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 5 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery5.jpg"
+              alt="Expressions on Canvas">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Expressions on Canvas</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Student Artwork</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 6 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery6.jpg"
+              alt="Art from the Heart">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Art from the Heart</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Young Creators</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 7 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery7.jpg"
+              alt="Learning Through Colors">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Learning Through Colors</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Art Class</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 8 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery8.jpg"
+              alt="Our Young Creators">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Our Young Creators</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Student Artwork</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PHOTO 9 -->
+
+        <article class="gallery-card">
+
+          <div class="gallery-image">
+
+            <img
+              src="assets/gallery/gallery9.jpg"
+              alt="Moments of Creation">
+
+          </div>
+
+          <div class="gallery-info">
+
+            <h2>Moments of Creation</h2>
+
+            <div class="gallery-line"></div>
+
+            <p>Trinity Art School</p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+
+      <div class="gallery-back">
+
+        <a href="index.html">
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =====================================
+       FOOTER
+       ===================================== -->
+
+  <footer>
+
+    <p>
+      © <span id="year"></span>
+      Trinity Art Zone · Trinity Art School
+    </p>
+
+  </footer>
+
+
+  <!-- Existing website JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
