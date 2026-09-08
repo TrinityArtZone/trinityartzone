@@ -1297,4 +1297,13 @@ function initializeStudentRegistration(
     }
   );
 
-}
+ // Add a small click effect
+    document.querySelectorAll(".social-box").forEach(function(box) {
+
+        box.addEventListener("click", function() {
+            const platform = this.dataset.platform;
+
+            console.log("Opening " + platform);
+        });
+
+    });
