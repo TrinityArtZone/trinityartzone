@@ -636,3 +636,81 @@ iframe {
             font-size: 26px;
         }
     }
+    /* ADMISSION DOWNLOAD BOX */
+
+.admission-download {
+  padding: 60px 20px;
+  background: #eee3d0;
+}
+
+.admission-box {
+  max-width: 950px;
+  margin: auto;
+  background: #f7efdf;
+  border: 1px solid #d1b99a;
+  border-left: 7px solid #6b422c;
+  border-radius: 14px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 8px 20px rgba(70, 45, 25, 0.12);
+}
+
+.admission-icon {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  border-radius: 50%;
+  background: #6b422c;
+  color: #f7efdf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.admission-content h2 {
+  color: #5a3826;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.admission-content p {
+  color: #6a4b36;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.admission-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #6b422c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.admission-btn:hover {
+  background: #4e2f20;
+  transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .admission-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .admission-content h2 {
+    font-size: 23px;
+  }
+
+}
