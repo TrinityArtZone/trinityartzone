@@ -1307,14 +1307,13 @@ function initializeStudentRegistration(
         });
 
     });
-   // ========================================
+// ========================================
 // TRINITY ART SCHOOL - ADMISSION FORM
 // ========================================
 
 function printAdmissionForm() {
     window.print();
 }
-
 
 function downloadAdmissionForm() {
 
