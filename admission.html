@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admission Form | Trinity Art School</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #eee3d0;
+      color: #4a2f20;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #5a3826;
+      color: #f7efdf;
+      padding: 18px 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      box-shadow: 0 3px 10px rgba(60, 35, 20, 0.25);
+    }
+
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+
+    .brand img {
+      width: 62px;
+      height: 62px;
+
+      border-radius: 50%;
+      object-fit: cover;
+
+      background: #eee3d0;
+    }
+
+
+    .brand-text h1 {
+      font-size: 25px;
+      letter-spacing: 1px;
+    }
+
+
+    .brand-text small {
+      display: block;
+
+      font-size: 12px;
+      letter-spacing: 2px;
+
+      color: #dbc4a8;
+    }
+
+
+    /* NAVIGATION */
+
+    nav a {
+      color: #f7efdf;
+      text-decoration: none;
+
+      margin-left: 20px;
+
+      font-size: 16px;
+
+      transition: 0.3s;
+    }
+
+
+    nav a:hover {
+      color: #d6b58a;
+    }
+
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    .container {
+      max-width: 1100px;
+
+      margin: 45px auto;
+
+      padding: 0 20px;
+    }
+
+
+    /* =========================
+       INTRODUCTION
+    ========================= */
+
+    .intro {
+      text-align: center;
+
+      margin-bottom: 30px;
+    }
+
+
+    .intro h2 {
+      font-size: 32px;
+
+      color: #5a3826;
+
+      margin-bottom: 10px;
+    }
+
+
+    .intro p {
+      max-width: 760px;
+
+      margin: auto;
+
+      color: #6a4b36;
+
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       INFORMATION BOX
+    ========================= */
+
+    .info-box {
+      background: #f7efdf;
+
+      border: 1px solid #d1b99a;
+
+      border-left: 6px solid #6b422c;
+
+      border-radius: 10px;
+
+      padding: 20px 25px;
+
+      margin-bottom: 35px;
+
+      box-shadow:
+        0 4px 12px rgba(75, 45, 25, 0.10);
+    }
+
+
+    .info-box strong {
+      color: #5a3826;
+    }
+
+
+    .info-box p {
+      margin-top: 5px;
+    }
+
+
+    /* =========================
+       FORM PREVIEW
+    ========================= */
+
+    .form-section {
+      text-align: center;
+    }
+
+
+    .form-section h3 {
+      color: #5a3826;
+
+      font-size: 24px;
+
+      margin-bottom: 15px;
+    }
+
+
+    .preview-text {
+      color: #765640;
+
+      font-size: 14px;
+
+      margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       A4 AREA
+    ========================= */
+
+    .a4-wrapper {
+      width: 100%;
+
+      overflow-x: auto;
+
+      padding: 20px 0 30px;
+    }
+
+
+    /*
+      A4 proportion:
+      210mm × 297mm
+    */
+
+    .a4-paper {
+      width: 794px;
+
+      min-height: 1123px;
+
+      background: white;
+
+      margin: 0 auto;
+
+      padding: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      box-shadow:
+        0 5px 25px rgba(60, 40, 25, 0.25);
+    }
+
+
+    /* =========================
+       ADMISSION FORM IMAGE
+    ========================= */
+
+    .admission-form-image {
+      width: 100%;
+
+      height: auto;
+
+      max-height: 1123px;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .actions {
+      text-align: center;
+
+      margin: 10px 0 50px;
+    }
+
+
+    .btn {
+      display: inline-block;
+
+      border: none;
+
+      padding: 12px 25px;
+
+      margin: 5px;
+
+      border-radius: 7px;
+
+      background: #6b422c;
+
+      color: white;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+      text-decoration: none;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      transition: 0.3s;
+    }
+
+
+    .btn:hover {
+      background: #4e2f20;
+
+      transform: translateY(-2px);
+    }
+
+
+    .btn.secondary {
+      background: #a9825d;
+    }
+
+
+    .btn.secondary:hover {
+      background: #886847;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #5a3826;
+
+      color: #eadbc7;
+
+      text-align: center;
+
+      padding: 25px 15px;
+
+      margin-top: 40px;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+      }
+
+
+      nav a {
+        margin: 0 8px;
+
+        font-size: 14px;
+      }
+
+
+      .a4-wrapper {
+        overflow-x: auto;
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .intro h2 {
+        font-size: 27px;
+      }
+
+
+      .intro p {
+        font-size: 15px;
+      }
+
+
+      .info-box {
+        padding: 18px;
+      }
+
+
+      /*
+        Make the A4 preview fit smaller screens
+      */
+
+      .a4-paper {
+        width: 100%;
+
+        min-height: auto;
+
+        box-shadow:
+          0 3px 15px rgba(60, 40, 25, 0.20);
+      }
+
+
+      .admission-form-image {
+        width: 100%;
+
+        height: auto;
+      }
+
+
+      .btn {
+        width: 90%;
+
+        max-width: 300px;
+      }
+
+    }
+
+
+    /* =========================
+       PRINT
+    ========================= */
+
+    @media print {
+
+      body {
+        background: white;
+      }
+
+
+      header,
+      .intro,
+      .info-box,
+      .form-section h3,
+      .preview-text,
+      .actions,
+      footer {
+        display: none !important;
+      }
+
+
+      .container {
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+
+        padding: 0;
+      }
+
+
+      .a4-wrapper {
+        padding: 0;
+
+        margin: 0;
+
+        overflow: visible;
+      }
+
+
+      .a4-paper {
+        width: 210mm;
+
+        height: 297mm;
+
+        min-height: 297mm;
+
+        margin: 0;
+
+        padding: 0;
+
+        box-shadow: none;
+
+        display: block;
+      }
+
+
+      .admission-form-image {
+        width: 210mm;
+
+        height: 297mm;
+
+        object-fit: contain;
+
+        display: block;
+      }
+
+
+      @page {
+        size: A4;
+
+        margin: 0;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="brand">
+
+      <!-- Change logo.png if your logo has another filename -->
+
+      <img
+        src="trinity logo.jpg"
+        alt="Trinity Art School Logo"
+      >
+
+      <div class="brand-text">
+
+        <h1>Trinity Art School</h1>
+
+        <small>ART, HEART &amp; SOUL</small>
+
+      </div>
+
+    </div>
+
+
+    <nav>
+
+      <a href="index.html">Home</a>
+
+      <a href="index.html#about">About</a>
+
+      <a href="index.html#gallery">Gallery</a>
+
+      <a href="student.html">Student</a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================= -->
+
+  <main class="container">
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <h2>Admission Form</h2>
+
+      <p>
+        This is the application form for admission to
+        <strong>Trinity Art School</strong>.
+        The form can be downloaded, printed on A4 size paper,
+        filled in manually and submitted offline at the art school.
+      </p>
+
+    </section>
+
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-box">
+
+      <strong>Offline Admission Process</strong>
+
+      <p>
+        Download the admission application form below and print it
+        on A4 size paper. Fill in the required information clearly
+        and submit the completed form offline at Trinity Art School.
+      </p>
+
+    </div>
+
+
+
+    <!-- FORM -->
+
+    <section class="form-section">
+
+      <h3>Admission Form Preview</h3>
+
+      <p class="preview-text">
+        The form below is displayed in A4 format for easy printing.
+      </p>
+
+
+      <div class="a4-wrapper">
+
+        <div class="a4-paper">
+
+          <!--
+            YOUR EXISTING ADMISSION FORM IMAGE
+
+            Keep admission-form.jpg in the same folder
+            as this HTML file.
+          -->
+
+          <img
+            src="addmission form.jpg"
+            alt="Trinity Art School Admission Application Form"
+            class="admission-form-image"
+            id="admissionFormImage"
+          >
+
+        </div>
+
+      </div>
+
+
+
+      <!-- BUTTONS -->
+
+      <div class="actions">
+
+        <button
+          type="button"
+          class="btn"
+          onclick="printAdmissionForm()"
+        >
+          🖨 Print / Save as PDF
+        </button>
+
+
+        <button
+          type="button"
+          class="btn secondary"
+          onclick="downloadAdmissionForm()"
+        >
+          ⬇ Download Form
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    © 2026 Trinity Art School · Art, Heart &amp; Soul
+
+  </footer>
+
+
+
+  <!-- YOUR EXISTING JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
