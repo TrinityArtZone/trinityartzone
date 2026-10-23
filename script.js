@@ -849,27 +849,15 @@ alert("Registration button is working!");
           );
 
 
-        let photoHTML = "";
+      let phoneHTML = "";
 
-        if (student.photo) {
+if (student.phone) {
+    const safePhone = escapeHtml(student.phone);
 
-          const safePhoto =
-            escapeHtml(
-              student.photo
-            );
-
-          photoHTML = `
-            <div
-              class="student-result-photo"
-            >
-              <img
-                src="${safePhoto}"
-                alt="${safeName}"
-              >
-            </div>
-          `;
-
-        }
+    phoneHTML = `
+        <p><strong>Phone Number:</strong> ${safePhone}</p>
+    `;
+}
 
 
         resultBox.classList.remove(
