@@ -540,7 +540,7 @@ function initializeStudentRegistration(
     async function (event) {
 
       event.preventDefault();
-
+alert("Registration button is working!");
 
       /* Check API URL */
 
