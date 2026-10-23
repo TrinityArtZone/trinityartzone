@@ -936,7 +936,7 @@ if (student.phone) {
               </div>
 
 
-              ${photoHTML}
+         
 
 
               <div
@@ -984,7 +984,7 @@ if (student.phone) {
                   </strong>
                   ${safeYear}
                 </p>
-
+                  ${phoneHTML}
               </div>
 
 
