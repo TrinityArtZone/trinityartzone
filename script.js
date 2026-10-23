@@ -609,10 +609,10 @@ alert("Registration button is working!");
             ) || ""
           ).trim(),
 
-        photo:
+        phone:
           String(
             formData.get(
-              "photo"
+              "phone"
             ) || ""
           ).trim()
 
