@@ -687,22 +687,6 @@ alert("Registration button is working!");
       }
 
 
-      if (
-        student.photo &&
-        !/^https?:\/\//i.test(
-          student.photo
-        )
-      ) {
-
-        showResult(
-          "Photo must be a valid HTTP/HTTPS URL.",
-          "error"
-        );
-
-        return;
-
-      }
-
 
       /* ---------------------------------------------------
          Disable submit button
