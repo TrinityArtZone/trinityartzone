@@ -19,8 +19,7 @@
    DO NOT use your Google Sheet URL here.
 */
 
-const API_URL = "https://script.google.com/macros/s/AKfycbw8p-c_f_wIF35AIEFKAKfsW_EVXrGkj2xrxYjXGmj8SurX9hY1nxrLTajrjgE_bIA2zg/exec";
-
+const API_URL = "https://script.google.com/macros/s/AKfycbwwGTeTYvLRLqfUXKz2ifSE0XkPlSPQVEDoRLlorLYSXbWbG4evYdq6wx0VZh6J1JSQjw/exec";
 document.addEventListener("DOMContentLoaded", function () {
 
   /* =======================================================
